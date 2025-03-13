@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de QR Code</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrious"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Gerador de QR Code</h1>
+        <input type="text" v-model="text" placeholder="Digite um texto">
+        <button @click="generateQRCode">Gerar QR Code</button>
+        <canvas v-show="qrCode" ref="qrcodeCanvas"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
